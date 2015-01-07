@@ -1,0 +1,27 @@
+{
+  "name": "tartare-util",
+  "version": "0.3.0",
+  "description": "A set of utils to make acceptance tests",
+  "license": "Apache-2.0",
+  "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
+  "main": "./index",
+  "scripts": {
+    "lint": "jscs index.js src && eslint index.js src",
+    "prepublish": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telefonicaid/tartare-util.git"
+  },
+  "bugs": "https://github.com/telefonicaid/tartare-util/issues",
+  "engines": {
+    "node": ">=0.10",
+    "npm": ">=1.4.0"
+  },
+  "keywords": [
+    "testing",
+    "QA",
+    "acceptance",
+    "tools"
+  ]
+}
