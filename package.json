@@ -1,12 +1,12 @@
 {
   "name": "tartare-util",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A set of utils to make acceptance tests",
   "license": "Apache-2.0",
   "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
   "main": "./index",
   "scripts": {
-    "lint": "./node_modules/.bin/jscs index.js lib && ./node_modules/.bin/eslint index.js lib",
+    "lint": "jscs index.js lib && eslint index.js lib",
     "prepublish": "npm run lint"
   },
   "repository": {
