@@ -1,5 +1,8 @@
 # RELEASE NOTES
 
+## v0.5.0 / XXX
+
+
 ## v0.4.0 / 11 Jan 2015
 * `tartare-util` is born as an independent package. Previously its functionality was in the `tartare` package.
 

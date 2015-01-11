@@ -1,6 +1,6 @@
 {
   "name": "tartare-util",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A set of utils to make acceptance tests",
   "license": "Apache-2.0",
   "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
