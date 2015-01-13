@@ -1,6 +1,7 @@
 # RELEASE NOTES
 
 ## v0.5.0 / XXX
+* Allow passing a 'signal' to `stopServer` and `killServersByTcpPorts` functions.
 
 
 ## v0.4.0 / 11 Jan 2015
