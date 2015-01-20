@@ -23,4 +23,4 @@
 
 module.exports = require('./lib/util');
 module.exports.http = require('./lib/http');
-module.exports.server = require('./lib/server');
+module.exports.sut = module.exports.server = require('./lib/sut');
