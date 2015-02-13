@@ -1,9 +1,8 @@
 # RELEASE NOTES
 
-## v0.5.0 / XXX
+## v0.5.0 / 13 Feb 2015
 * Allow passing a 'signal' to `stopServer` and `killServersByTcpPorts` functions.
 * New function `killProcesses` that allows killing processes by name and command line arguments.
-
 
 ## v0.4.0 / 11 Jan 2015
 * `tartare-util` is born as an independent package. Previously its functionality was in the `tartare` package.
