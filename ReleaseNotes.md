@@ -1,6 +1,6 @@
 # RELEASE NOTES
 
-## v0.6.0 / XXX
+## v0.6.0 / 19 Mar 2015
 * The `startServer` function now passes an object to the callback that includes the stdout and stderr streams.
 
 ## v0.5.0 / 13 Feb 2015
