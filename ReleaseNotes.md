@@ -1,5 +1,8 @@
 # RELEASE NOTES
 
+## v0.6.0 / 19 Mar 2015
+* The `startServer` function now passes an object to the callback that includes the stdout and stderr streams.
+
 ## v0.5.0 / 13 Feb 2015
 * Allow passing a 'signal' to `stopServer` and `killServersByTcpPorts` functions.
 * New function `killProcesses` that allows killing processes by name and command line arguments.
