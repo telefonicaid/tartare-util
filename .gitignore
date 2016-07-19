@@ -12,3 +12,5 @@ node_modules
 
 # npm
 npm-debug.log
+
+test/
