@@ -4,3 +4,5 @@ node_modules/
 .gitignore
 .npmignore
 .eslintrc.json
+.release.json
+.changelog.js
