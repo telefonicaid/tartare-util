@@ -141,8 +141,9 @@ You get a file named `config.json` with the following content:
 * `timeout` (Number) Max time (in ms) to wait for the server to start (Defaults to 5000).
 * `cb` The callback function will be called with the error and an object with some of the following parameters:
   * `pid` (Number) The process' PID (only if it has been started).
-  * `stdout` (Stream) Stream used by the process when writing to *stdout* (only if it has been started).
-  * `stderr` (Stream) Stream used by the process when writing to *stderr* (only if it has been started).
+  * `stdout` (Stream) A Readable Stream that represents the process' stdout (only if it has been started).
+  * `stderr` (Stream) A Readable Stream that represents the process' stderr (only if it has been started).
+  * `stdin` (Stream) A Writable Stream that represents the child process' stdin (only if it has been started).
   * `readStdout` (String) What the process has already written to *stdout* at the time the callback is called.
   * `readStderr` (String) What the process has already written to *stderr* at the time the callback is called.
   * `exitCode` (Number) Exit code returned by the process, in case it has exited.
@@ -157,13 +158,13 @@ Depending on how your server behaves, you can use this function in different way
   and the function will wait until the server has writen such a message. Then the callback will be called 
   with different arguments depending on the server behaviour:
   * If everything goes well and the sever writes the message, the callback will be called without error and the second
-    parameter will include `pid`, `stdout`, `stderr`, `readStdout` and `readStderr`.
+    parameter will include `pid`, `stdout`, `stderr`, `stdin`, `readStdout` and `readStderr`.
   * If the server exits before writing the message (before the `timeout` expires), the callback will be 
     called with an error.
   * If the server does not write the message before the `timeout` expires (and it keeps running), it will 
     be killed and the callback will be called with an error.
 * If the server does not write anything to signal that it has started, call the function without `startupMessages`
-  and it will wait for `timeout` ms, and then the callback will be called with `pid`, `stdout`, `stderr`, 
+  and it will wait for `timeout` ms, and then the callback will be called with `pid`, `stdout`, `stderr`, `stdin`,
   `readStdout` and `readStderr` in the second argument.
 * If you expect the server to exit (for instance, because you are testing a wrong configuration), call the function 
   without `startupMessages`, and the callback will be called with `readStdout`, `readStderr`, `exitCode` and `signal` 
