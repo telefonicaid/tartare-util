@@ -1,5 +1,8 @@
 # RELEASE NOTES
 
+## v1.1.0 / 13 Sep 2016
+* The object passed to the callback of the `startServer` function now includes the stdin stream. 
+
 ## v1.0.0 / 22 Jul 2016
 * The `killServersByTcpPorts` function no longer invokes `lsof` or `netstat` commands as `sudo`.
 * Added API documentation.
