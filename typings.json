@@ -1,0 +1,7 @@
+{
+  "name": "tartare-util",
+  "main": "./index.d.ts",
+  "globalDependencies": {
+    "node": "registry:dt/node#0.10.1+20160906152630"
+  }
+}

@@ -10,11 +10,24 @@
 
 ---
 
+![TypeScript definition](https://img.shields.io/badge/TypeScript%20Definition-%E2%9C%93-blue.svg)
+
 This module offers a set of utils that can help you when making acceptance tests.
 
 ## Install
 ```bash
 $ npm install tartare-util
+```
+
+## Import
+JavaScript:
+```js
+var tartareUtil = require('tartare-util');
+```
+
+TypeScript:
+```ts
+import * as tartareUtil from 'tartare-util';
 ```
 
 ## API
@@ -46,8 +59,6 @@ Returns the HTTP reason related to the given status code. It gets the reason mes
 'Unknown status code' string.
 
 ```js
-var tartareUtil = require('tartare-util');
-
 tartareUtil.http.getReason(200);
 'OK'
 ```
@@ -171,6 +182,7 @@ Depending on how your server behaves, you can use this function in different way
   in the second argument when the server exits.
 
 In any other case, the callback will be called with an error if the server cannot be executed or it unexpectedly exits.
+Such an error will have the `stdout` and `stderr` properties with the output written by the server. 
 
 Note that you can put an array of strings on `startupMessages` if the server writes several messages to signal 
 that it has started (e.g.: listening on several ports, listening on a port and connected to the database, etc.).
@@ -183,13 +195,13 @@ var serverOpts = {
   startupMessages: 'Listening on port 8008'
 };
 
-tartareUtil.sut.startServer(serverOpts, 3000, function(err, res) {
+tartareUtil.sut.startServer(serverOpts, 3000, function(err, server) {
   // As soon as the server writes the message
   if (err) {
     err.message += '\n\nstderr:' + err.stderr + '\n\nstdout:' + err.stdout;
     return cb(err);
   }
-  cb(null, res.pid);
+  cb(null, server.pid);
 });
 ```
 
@@ -200,15 +212,17 @@ var serverOpts = {
   args: ['--config', 'config.json']
 };
 
-tartareUtil.sut.startServer(serverOpts, 3000, function(err, res) {
+tartareUtil.sut.startServer(serverOpts, 3000, function(err, server) {
   // After 3 seconds
   if (err) {
     err.message += '\n\nstderr:' + err.stderr + '\n\nstdout:' + err.stdout;
     return cb(err);
   }
-  cb(null, res.pid);
+  cb(null, server.pid);
 });
 ```
+
+With TypeScript you can use the `tartareUtil.sut.Server` type for the `server` parameter of the callback.
 
 ### sut.stopServer(pid, [signal])
 * `pid` (Number) The PID of the process to stop.
