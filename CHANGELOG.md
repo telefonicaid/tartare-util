@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/telefonicaid/tartare-util/compare/v1.1.0...v1.2.0) (2016-09-20)
+
+
+### Features
+
+* Add TypeScript declarations. ([5034f7c](https://github.com/telefonicaid/tartare-util/commit/5034f7c))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/telefonicaid/tartare-util/compare/v1.0.0...v1.1.0) (2016-09-13)
 

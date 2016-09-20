@@ -1,5 +1,8 @@
 # RELEASE NOTES
 
+## v1.2.0 / 20 Sep 2016
+* Added TypeScript declarations.
+
 ## v1.1.0 / 13 Sep 2016
 * The object passed to the callback of the `startServer` function now includes the stdin stream. 
 
