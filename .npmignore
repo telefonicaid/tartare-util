@@ -1,6 +1,7 @@
 test/
 node_modules/
 .idea/
+.vscode/
 .gitignore
 .npmignore
 .eslintrc.json
@@ -8,4 +9,3 @@ node_modules/
 .changelog.js
 tsconfig.json
 tslint.json
-typings/

@@ -11,8 +11,8 @@ declare namespace http {
 
 interface Http {
     getReason(statusCode: number | string): string;
-    lowerCaseHeaders(headers: http.Headers): http.Headers;
-    getCharsetFromContentType(value: string): string | void;
+    lowerCaseHeaders(headers?: http.Headers | null): http.Headers;
+    getCharsetFromContentType(value?: string | null): string | null;
 }
 
 export let http: Http;
@@ -23,7 +23,7 @@ declare namespace sut {
         args?: string[];
         env?: any;
         cwd?: string;
-        startupMessages?: string | string[] | void;
+        startupMessages?: string | string[] | null;
     }
 
     export interface Server {
@@ -47,14 +47,14 @@ declare namespace sut {
 }
 
 interface Sut {
-    renderConfigFile(templateConfigFile: string, outputConfigFile: string, baseConfig: Object, additionalConfig?: Object);
-    startServer(serverOpts: sut.StartServerOptions, timeout: number, cb: (err: Error, server: sut.Server) => any);
-    startServer(serverOpts: sut.StartServerOptions, cb: (err: Error, server: sut.Server) => any);
-    stopServer(pid: number, signal?: string| number);
-    killServersByTcpPorts(ports: number | number[], signal: string | number, cb: (err: Error) => any);
-    killServersByTcpPorts(ports: number | number[], cb: (err: Error) => any);
-    killProcesses(opts: sut.KillProcessesOptions, signal: string, cb: (err: Error) => any);
-    killProcesses(opts: sut.KillProcessesOptions, cb: (err: Error) => any);
+    renderConfigFile(templateConfigFile: string, outputConfigFile: string, baseConfig: Object, additionalConfig?: Object): void;
+    startServer(serverOpts: sut.StartServerOptions, timeout: number, cb: (err: Error, server: sut.Server) => any): void;
+    startServer(serverOpts: sut.StartServerOptions, cb: (err: Error, server: sut.Server) => any): void;
+    stopServer(pid: number, signal?: string | number): void;
+    killServersByTcpPorts(ports: number | number[], signal: string | number, cb: (err: Error) => any): void;
+    killServersByTcpPorts(ports: number | number[], cb: (err: Error) => any): void;
+    killProcesses(opts: sut.KillProcessesOptions, signal: string, cb: (err: Error) => any): void;
+    killProcesses(opts: sut.KillProcessesOptions, cb: (err: Error) => any): void;
 }
 
 export let sut: Sut;

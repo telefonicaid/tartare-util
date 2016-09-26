@@ -2,7 +2,10 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es5",
-        "noImplicitAny": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
         "sourceMap": false,
         "moduleResolution": "node",
         "pretty": true,
