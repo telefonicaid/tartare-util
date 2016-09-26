@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/telefonicaid/tartare-util/compare/v1.2.0...v1.2.1) (2016-09-26)
+
+
+### Bug Fixes
+
+* TypeScript declarations ([f005daa](https://github.com/telefonicaid/tartare-util/commit/f005daa))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/telefonicaid/tartare-util/compare/v1.1.0...v1.2.0) (2016-09-20)
 
