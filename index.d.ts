@@ -11,8 +11,8 @@ declare namespace http {
 
 interface Http {
     getReason(statusCode: number | string): string;
-    lowerCaseHeaders(headers?: http.Headers | null): http.Headers;
-    getCharsetFromContentType(value?: string | null): string | null;
+    lowerCaseHeaders(headers?: http.Headers): http.Headers;
+    getCharsetFromContentType(value?: string): string | null;
 }
 
 export let http: Http;
@@ -23,7 +23,7 @@ declare namespace sut {
         args?: string[];
         env?: any;
         cwd?: string;
-        startupMessages?: string | string[] | null;
+        startupMessages?: string | string[];
     }
 
     export interface Server {
