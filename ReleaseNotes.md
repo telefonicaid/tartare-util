@@ -1,5 +1,8 @@
 # RELEASE NOTES
 
+## v1.2.2 / 27 Sep 2016
+* Removed strict checking of nulls in TypeScript declarations.
+
 ## v1.2.1 / 26 Sep 2016
 * Improved TypeScript declarations.
 
